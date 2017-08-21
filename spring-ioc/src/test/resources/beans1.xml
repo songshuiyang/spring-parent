@@ -6,13 +6,6 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean class="com.learn.ioc.demain.Car" name="car">
-        <property name="brand">
-            <value>父容器</value>
-        </property>
-        <property name="color" value="red"></property>
-        <property name="maxSpeed" value="120"></property>
-    </bean>
 
 
 </beans>

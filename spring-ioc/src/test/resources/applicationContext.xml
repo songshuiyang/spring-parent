@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!--扫描类包以应用注解定义的Bean-->
+    <!-- <context:component-scan base-package="com.learn"/>-->
+
+    <!--仅希望扫描特定的类而非基类包下的所有类-->
+    <!--<context:component-scan base-package="com.learn" resource-pattern="ioc/utils/*"/>-->
+
+    <context:component-scan base-package="com.learn.ioc"/>
+
+    <bean id="car1" class="com.learn.ioc.demain.Car" name="car">
+        <property name="brand">
+            <value><![CDATA[红旗&汽车]]></value>
+        </property>
+        <property name="color" value="red"></property>
+        <property name="maxSpeed" value="120"></property>
+    </bean>
+
+
+</beans>
