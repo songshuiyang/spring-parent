@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @description:
  * @date 2017/8/21 15:01
  */
-public class AnnotationBeans {
+public class AnnotationCarConfig {
 
     private static ApplicationContext context;
 

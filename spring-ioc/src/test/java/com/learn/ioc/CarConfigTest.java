@@ -1,6 +1,7 @@
 package com.learn.ioc;
 
 
+import com.learn.ioc.beanConfig.CarConfig;
 import com.learn.ioc.demain.Boss;
 import com.learn.ioc.demain.Car;
 import org.junit.Test;
@@ -21,7 +22,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
  * @description:
  * @date 2017/8/19 19:23
  */
-public class BeansTest {
+public class CarConfigTest {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -59,7 +60,7 @@ public class BeansTest {
     }
     @Test
     public void getBeansByAnnotation(){
-        ApplicationContext application = new AnnotationConfigApplicationContext(Beans.class);
+        ApplicationContext application = new AnnotationConfigApplicationContext(CarConfig.class);
         Car car = application.getBean(Car.class);
         logger.debug(car.toString());
     }

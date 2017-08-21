@@ -1,4 +1,4 @@
-package com.learn.ioc;
+package com.learn.ioc.beanConfig;
 
 import com.learn.ioc.demain.Car;
 import org.springframework.context.annotation.Bean;
@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Configuration;
  * @date 2017/8/19 20:19
  */
 @Configuration
-public class Beans {
+public class CarConfig {
 
     @Bean(name = "car")
-    public Car createCar(){
+    public Car createCar() {
         Car car = new Car();
         car.setBrand("基于注解的方式构建Beans");
         car.setColor("Annotation");

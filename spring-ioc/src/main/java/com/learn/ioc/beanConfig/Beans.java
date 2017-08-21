@@ -1,4 +1,4 @@
-package com.learn.ioc;
+package com.learn.ioc.beanConfig;
 
 import com.learn.ioc.demain.Car;
 import org.springframework.context.annotation.Bean;
