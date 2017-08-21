@@ -29,6 +29,8 @@ public class AnnotationBeans {
             Class<?> aClass = context.getType(s);
             logger.info("Bean的名字{}",s);
         }
+        logger.debug("--------------------开始关闭容器");
+        ((ClassPathXmlApplicationContext)context).destroy();
     }
     @Test
     public void testLoadController(){
