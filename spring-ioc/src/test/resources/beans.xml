@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car" class="com.learn.ioc.demain.Car" name="car">
+        <property name="brand">
+            <value><![CDATA[红旗&汽车]]></value>
+        </property>
+        <property name="color" value="red"></property>
+        <property name="maxSpeed" value="120"></property>
+    </bean>
+
+    <bean id="boss" class="com.learn.ioc.demain.Boss">
+        <constructor-arg name="name" value="liwang"></constructor-arg>
+        <constructor-arg name="age" value="18"></constructor-arg>
+        <constructor-arg name="car">
+            <ref bean="car"/>
+        </constructor-arg>
+    </bean>
+    <!--非静态工厂方法注入-->
+    <bean id="car1" factory-bean="car" factory-method="createHongQiCar">
+
+    </bean>
+    <!--静态工厂方法注入-->
+    <bean id="car2" class="com.learn.ioc.demain.Car" factory-method="createStaticHongQiCar"></bean>
+
+    <bean id="boss1" class="com.learn.ioc.demain.Boss">
+        <property name="name" value="集合类型属性"/>
+        <property name="age" value="3"/>
+        <property name="car" ref="car"/>
+        <property name="carList">
+            <list>
+                <ref bean="car"/>
+                <ref bean="car1"/>
+                <ref bean="car2"/>
+            </list>
+        </property>
+    </bean>
+    <!--bean之间的继承关系-->
+    <bean id="abstractCar" class="com.learn.ioc.demain.Car"
+          p:brand="抽象车" p:color="黄色" p:maxSpeed="120" abstract="true"/>
+
+    <bean id="car3" parent="abstractCar"
+          p:brand="子类车"/>
+    <!--bean之间的依赖关系-->
+    <bean id="car4" class="com.learn.ioc.demain.Car" depends-on="car3"/>
+    <!--bean之间的引用关系-->
+    <bean id="boss2" class="com.learn.ioc.demain.Boss">
+        <property name="name" value="集合类型属性"/>
+        <property name="age" value="3"/>
+       <!-- <property name="car">
+            &lt;!&ndash;<idref bean="car"/>&ndash;&gt;
+        </property>-->
+        <property name="carList">
+            <list>
+                <ref bean="car"/>
+                <ref bean="car1"/>
+                <ref bean="car2"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
