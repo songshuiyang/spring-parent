@@ -19,7 +19,6 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
       <scope>test</scope>
     </dependency>
     <!-- spring 核心 -->
@@ -40,7 +39,6 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
     </dependency>
-
 
     <!--日志-->
     <dependency>
