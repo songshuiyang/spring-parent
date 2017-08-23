@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
     public User createUser() {
         User user = new User();
         user.setUserName("songshuiyang");
-        user.setPassword("123456");
+        user.setPassWord("123456");
         user.setRealName("宋水阳");
         return user;
     }

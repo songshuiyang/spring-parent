@@ -8,7 +8,7 @@ package com.learn.mvc.demain;
  */
 public class User {
     private String userName;
-    private String password;
+    private String passWord;
     private String realName;
 
     public String getUserName() {
@@ -19,12 +19,12 @@ public class User {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPassWord() {
+        return passWord;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getRealName() {
@@ -39,7 +39,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
+                ", passWord='" + passWord + '\'' +
                 ", realName='" + realName + '\'' +
                 '}';
     }
