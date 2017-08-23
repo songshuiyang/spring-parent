@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author songshuiyang
- * @title: 基于类注解的配置方式
+ * @title: 基于Java类的配置
  * @description:
  * @date 2017/8/19 20:19
  */
