@@ -5,11 +5,12 @@ import com.learn.mvc.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author songshuiyang
@@ -44,6 +45,47 @@ public class UserController {
     public String register(@ModelAttribute("user") User user){
         logger.debug("-----------{}"+user.toString());
         return "hello";
+    }
+
+    /**
+     * 测试PathVariable注解
+     * @param id
+     */
+    @RequestMapping("regist/{id}")
+    @ResponseBody
+    public Map<String,Object> registPathVariable(@PathVariable String id){
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("name","songshuiyang");
+        map.put("id",id);
+        logger.debug("------------{}",id);
+        return map;
+    }
+
+    /**
+     * 测试参数绑定
+     * @param sessionId
+     * @param encoding
+     * @param cookie
+     */
+    @RequestMapping("header")
+    public void cookieValue(@CookieValue(value="sessionId",required=false) String sessionId,
+                            @RequestHeader("Accept-Encoding") String encoding,
+                            @RequestHeader("Cookie") String cookie){
+        logger.info("sessionId{}",sessionId);
+        logger.info("encoding{}",encoding);
+        logger.info("keepAlive{}",cookie);
+    }
+
+    /**
+     * 整合freemaker
+     * @return
+     */
+    @RequestMapping("freemaker")
+    public ModelAndView freemaker() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("freemaker");
+        modelAndView.addObject("name", userService.createUser().getUserName());
+        return modelAndView;
     }
 
 

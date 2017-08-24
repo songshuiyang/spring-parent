@@ -27,6 +27,7 @@
 		<javax.servlet.version>3.1.0</javax.servlet.version>
 		<junit.version>4.11</junit.version>
 		<logback.version>1.1.1</logback.version>
+		<commons-lang.version>2.2</commons-lang.version>
 		<!-- 其他版本 -->
 		<jdk.version>1.7</jdk.version>
 	</properties>
@@ -175,6 +176,12 @@
 				<groupId>org.codehaus.jackson</groupId>
 				<artifactId>jackson-core-asl</artifactId>
 				<version>1.9.13</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons-lang.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
