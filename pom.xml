@@ -12,6 +12,7 @@
 		<module>spring-mvc</module>
 		<module>spring-cache</module>
 		<module>spring-tx</module>
+        <module>spring-hibernate</module>
 	</modules>
 	<properties>
 		<!-- 依赖包版本 -->
