@@ -14,5 +14,7 @@
           p:location="classpath:jdbc.properties"
           p:fileEncoding="utf-8"/>
 
+    <bean name="boss2" class="com.learn.ioc.demain.Boss2" p:name="#{boss1.name}" p:age="#{boss1.age}"/>
+
 
 </beans>

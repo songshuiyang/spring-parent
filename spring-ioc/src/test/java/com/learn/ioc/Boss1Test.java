@@ -1,6 +1,7 @@
 package com.learn.ioc;
 
 import com.learn.ioc.demain.Boss1;
+import com.learn.ioc.demain.Boss2;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,6 +15,8 @@ public class Boss1Test {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans1.xml");
         Boss1 boss = (Boss1) context.getBean("boss1");
+        Boss2 boss1 = (Boss2) context.getBean("boss2");
         System.out.println(boss.toString());
+        System.out.println(boss1.toString());
     }
 }
