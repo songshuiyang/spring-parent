@@ -88,5 +88,17 @@ public class UserController {
         return modelAndView;
     }
 
-
+    /**
+     * url: user/velovity
+     * 整合velovity
+     *
+     * @return
+     */
+    @RequestMapping("velovity")
+    public ModelAndView velovity() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("velovity");
+        modelAndView.addObject("hello", "velovity");
+        return modelAndView;
+    }
 }
