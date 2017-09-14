@@ -17,9 +17,15 @@ count:<%=count++%>
 <br/>
 <%=info()%>
 </body>
-<%
-    for (int i = 0; i < 10; i++) {
-%>
-<input type="text"/>
-<% } %>
+
+<br/>
+测试JSP useBean setProperty getProperty
+<br/>
+<b>scope:request page session application</b>
+<br/>
+<jsp:useBean id="test" class="com.learn.mvc.demain.User"/>
+<jsp:setProperty name="test" property="realName" value="songshuyang"/>
+<jsp:setProperty name="test" property="passWord" value="123456"/>
+<jsp:getProperty name="test" property="realName"/>
+<jsp:getProperty name="test" property="passWord"/>
 </html>
