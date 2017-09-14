@@ -17,8 +17,8 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
-  <!--  <servlet>
-      <servlet-name>dispatcherServlet</servlet-name>&lt;!&ndash; 默认加载/WEB-INF servletName-servlet.xml 的Spring配置文件&ndash;&gt;
+  <servlet>
+    <servlet-name>dispatcherServlet</servlet-name><!-- 默认加载/WEB-INF servletName-servlet.xml 的Spring配置文件-->
       <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
       <init-param>
         <param-name>contextConfigLocation</param-name>
@@ -28,7 +28,7 @@
     <servlet-mapping>
       <servlet-name>dispatcherServlet</servlet-name>
       <url-pattern>/</url-pattern>
-    </servlet-mapping>-->
+    </servlet-mapping>
 
   <!--中文乱码问题-->
   <filter>
