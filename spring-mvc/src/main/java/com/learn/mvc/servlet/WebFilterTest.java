@@ -1,4 +1,4 @@
-package com.learn.mvc.controller;
+package com.learn.mvc.servlet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +10,7 @@ import java.io.IOException;
 
 /**
  * @author songshuiyang
- * @title:
+ * @title: 过滤器
  * @description:
  * @date 2017/9/15 9:45
  */

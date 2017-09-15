@@ -1,4 +1,4 @@
-package com.learn.mvc.controller;
+package com.learn.mvc.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
