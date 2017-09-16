@@ -1,10 +1,9 @@
 package com.learn.struts.action;
 
 import com.learn.struts.demain.User;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
 
 /**
  * @author songshuiyang
@@ -14,26 +13,27 @@ import javax.annotation.Resource;
  */
 @Component
 public class LoginAction extends ActionSupport {
-    public String Name;
-    public int Age;
 
-    @Resource
+    private String userName;
+
+    private String passWord;
+
     public User user;
 
-    public String getName() {
-        return Name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public int getAge() {
-        return Age;
+    public String getPassWord() {
+        return passWord;
     }
 
-    public void setAge(int age) {
-        Age = age;
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public User getUser() {
@@ -44,8 +44,14 @@ public class LoginAction extends ActionSupport {
         this.user = user;
     }
 
+    // 定义处理用户请求的execute方法
     @Override
     public String execute() throws Exception {
-        return "success";
+        if (passWord.equals("123456")) {
+            ActionContext.getContext().getSession().put("user", userName);
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
     }
 }
