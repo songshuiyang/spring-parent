@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd" >
+<struts>
+    <constant name="struts.objectFactory" value="spring"/>
+
+    <constant name="struts.devMode" value="true"></constant>
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <constant name="struts.locale" value="zh_CN"></constant>
+
+    <package name="com.learn.struts" extends="struts-default">
+        <action name="login" class="login">
+            <result>/index.jsp</result>
+        </action>
+    </package>
+</struts>

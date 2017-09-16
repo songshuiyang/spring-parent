@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置Struts2依赖关系-->
+    <bean id="user" name="user" class="com.learn.struts.demain.User">
+        <property name="userName" value="songshuiyang"></property>
+        <property name="passWord" value="123456"></property>
+    </bean>
+    <bean id="login" name="login"
+          class="com.learn.struts.action.LoginAction">
+        <property name="user" ref="user"></property>
+    </bean>
+</beans>
