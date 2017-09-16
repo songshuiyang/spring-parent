@@ -40,6 +40,10 @@ count:<%=count++%>
     }
 %>
 
+## 测试表达式语言到的内置对象
+<br/>
+${header.host}
+<br/>
 
 
 </html>

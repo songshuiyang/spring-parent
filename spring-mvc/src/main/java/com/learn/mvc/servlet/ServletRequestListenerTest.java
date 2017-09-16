@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
-import javax.servlet.annotation.WebListener;
 
 /**
  * @author songshuiyang
@@ -13,7 +12,7 @@ import javax.servlet.annotation.WebListener;
  * @description:
  * @date 2017/9/15 15:47
  */
-@WebListener
+/*@WebListener*/
 public class ServletRequestListenerTest implements ServletRequestListener {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
