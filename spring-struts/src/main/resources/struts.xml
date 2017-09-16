@@ -9,7 +9,7 @@
     <constant name="struts.locale" value="zh_CN"></constant>
 
     <package name="com.learn.struts" extends="struts-default">
-        <action name="login" class="login">
+        <action name="login" class="loginAction">
             <result>/index.jsp</result>
         </action>
     </package>

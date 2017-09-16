@@ -1,15 +1,23 @@
 package com.learn.struts.demain;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author songshuiyang
  * @title:
  * @description:
  * @date 2017/8/23 21:57
  */
+@Component
 public class User {
     private String userName;
     private String passWord;
     private String realName;
+
+    public User() {
+        userName = "songshuiyang";
+        passWord = "6954321";
+    }
 
     public String getUserName() {
         return userName;
