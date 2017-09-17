@@ -6,15 +6,17 @@
     <constant name="struts.devMode" value="true"></constant>
     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
     <constant name="struts.locale" value="zh_CN"></constant>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
 
-    <!--所有的Action定义都应该放在package下-->
+    <!-- 所有的Action定义都应该放在package下-->
     <package name="com.learn.struts" extends="struts-default">
+        <!-- name属性即是该Action的名字，也指定了该Action所处理的请求的URL-->
         <action name="login" class="loginAction">
             <result>/index.jsp</result>
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
         </action>
-        <action name="show">
+        <action name="error">
             <result>/error.jsp</result>
         </action>
     </package>

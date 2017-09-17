@@ -66,4 +66,10 @@ public class LoginAction extends ActionSupport { // ActionSupport 默认的Actio
             return ERROR;
         }
     }
+
+    // 使用Action的动态方法调用
+    public String regist() throws Exception {
+        System.out.println("执行注册方法");
+        return SUCCESS;
+    }
 }

@@ -3,8 +3,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <body>
-<h2>Hello World!</h2>
-
 <%--<form action="login">
     姓名<s:property value="user.userName" />
     密码<s:property value="user.passWord" />
@@ -12,7 +10,17 @@
 <s:form action="login">
     姓名:<s:textfield name="userName"/>
     密码:<s:textfield name="passWord"/>
-    <s:submit/>
+    <s:submit value="登入"/>
+    <input type="submit" value="注册" onclick="regist();"
 </s:form>
 </body>
+
+<script type="application/javascript">
+    function regist() {
+        targetForm = document.form[0];
+        targetForm.action = "login!regist";
+    }
+
+
+</script>
 </html>
