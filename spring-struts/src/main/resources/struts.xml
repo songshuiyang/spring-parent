@@ -16,6 +16,9 @@
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
         </action>
+        <action name="regist" class="loginAction" method="regist">
+            <result name="success">/welcome.jsp</result>
+        </action>
         <action name="error">
             <result>/error.jsp</result>
         </action>

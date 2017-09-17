@@ -11,16 +11,15 @@
     姓名:<s:textfield name="userName"/>
     密码:<s:textfield name="passWord"/>
     <s:submit value="登入"/>
-    <input type="submit" value="注册" onclick="regist();"
+    <input type="submit" value="注册" onclick="regist();"/>
 </s:form>
 </body>
 
 <script type="application/javascript">
     function regist() {
+        alert("1");
         targetForm = document.form[0];
-        targetForm.action = "login!regist";
+        targetForm.action = "regist";
     }
-
-
 </script>
 </html>
