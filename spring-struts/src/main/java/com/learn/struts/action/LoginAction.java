@@ -1,7 +1,6 @@
 package com.learn.struts.action;
 
 import com.learn.struts.demain.User;
-import com.learn.struts.exception.myException;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.stereotype.Component;
@@ -64,9 +63,9 @@ public class LoginAction extends ActionSupport { // ActionSupport 默认的Actio
             tip = "tip messages";
             return SUCCESS;
         } else {
-            // throw new Exception();
-            throw new myException();
-            // return ERROR;
+            // throw new Exception();    抛出全局异常
+            // throw new myException();  抛出自定义异常
+            return ERROR;
         }
     }
 
