@@ -58,7 +58,7 @@ public class LoginAction extends ActionSupport { // ActionSupport 默认的Actio
     // 定义处理用户请求的execute方法
     @Override
     public String execute() throws Exception {
-        if (passWord.equals("123456")) {
+        if (passWord != null && passWord.equals("123456")) {
             ActionContext.getContext().getSession().put("user", userName);
             tip = "tip messages";
             return SUCCESS;

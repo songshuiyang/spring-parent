@@ -14,7 +14,7 @@
         <action name="login" class="loginAction"> <!--JavaBean由Spring进行管理-->
             <result>/index.jsp</result>
             <result name="error">/error.jsp</result>
-            <result name="success" type="redirect">/welcome.jsp</result>
+            <result name="success">/welcome.jsp</result>
         </action>
         <action name="regist" class="loginAction" method="regist">
             <result name="success">/welcome.jsp</result>
@@ -22,14 +22,22 @@
         <!--        <action name="error">
                     <result type="plainText">/error.jsp</result>
                 </action>-->
-        <!--plainText结果类型-->
+        <!-- plainText 结果类型-->
         <action name="error">
             <result type="plainText">
                 <param name="location">/error.jsp</param>
                 <param name="charSet">UTF-8</param>
             </result>
         </action>
-
+        <!-- redirectAction 结果类型-->
+        <action name="reAction">
+            <result type="redirectAction">
+                <!--指定重定向的actionName-->
+                <param name="actionName">login</param>
+                <!--指定重定向Action所在的命名空间-->
+                <param name="namespace">com.learn.struts</param>
+            </result>
+        </action>
         <!--配置一个默认Action,默认Action为simpleViewResultAction-->
         <!--      <default-action-ref name="simpleViewResultAction"/>
 
