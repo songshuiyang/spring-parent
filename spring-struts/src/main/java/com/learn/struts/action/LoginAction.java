@@ -63,6 +63,7 @@ public class LoginAction extends ActionSupport { // ActionSupport 默认的Actio
             tip = "tip messages";
             return SUCCESS;
         } else {
+            // throw new Exception();
             return ERROR;
         }
     }

@@ -10,6 +10,15 @@
 
     <!-- 所有的Action定义都应该放在package下-->
     <package name="com.learn.struts" extends="struts-default">
+        <!--定义全局异常映射-->
+        <global-results>
+            <result name="root">/exception.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="root"/>
+        </global-exception-mappings>
+
+
         <!-- name属性即是该Action的名字，也指定了该Action所处理的请求的URL-->
         <action name="login" class="loginAction"> <!--JavaBean由Spring进行管理-->
             <result>/index.jsp</result>
@@ -52,6 +61,7 @@
         <!--     <global-results>
                  <result>/WEB-INF/content/${target}.jsp</result>
              </global-results>-->
+
 
     </package>
 </struts>
