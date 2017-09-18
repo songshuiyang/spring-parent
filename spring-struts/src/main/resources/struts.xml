@@ -14,7 +14,7 @@
         <action name="login" class="loginAction"> <!--JavaBean由Spring进行管理-->
             <result>/index.jsp</result>
             <result name="error">/error.jsp</result>
-            <result name="success">/welcome.jsp</result>
+            <result name="success" type="redirect">/welcome.jsp</result>
         </action>
         <action name="regist" class="loginAction" method="regist">
             <result name="success">/welcome.jsp</result>
