@@ -48,6 +48,10 @@
         <action name="skill" class="loginAction">
             <result name="success">/${userName}.jsp</result>
         </action>
+        <!-- 全局结果-->
+        <!--     <global-results>
+                 <result>/WEB-INF/content/${target}.jsp</result>
+             </global-results>-->
 
     </package>
 </struts>
