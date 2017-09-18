@@ -19,9 +19,15 @@
         <action name="regist" class="loginAction" method="regist">
             <result name="success">/welcome.jsp</result>
         </action>
-        <!--        <action name="error">
-                    <result type="plainText">/error.jsp</result>
-                </action>-->
+        <!--    <action name="error">
+                <result type="plainText">/error.jsp</result>
+            </action>-->
+        <!--配置一个默认Action,默认Action为simpleViewResultAction-->
+        <!--      <default-action-ref name="simpleViewResultAction"/>
+
+              <action name="simpleViewResultAction" class="simpleViewResultAction">
+                  <result name="error">/error.jsp</result>
+              </action>-->
         <!-- plainText 结果类型-->
         <action name="error">
             <result type="plainText">
@@ -38,11 +44,10 @@
                 <param name="namespace">com.learn.struts</param>
             </result>
         </action>
-        <!--配置一个默认Action,默认Action为simpleViewResultAction-->
-        <!--      <default-action-ref name="simpleViewResultAction"/>
+        <!-- Action属性值决定物理视图资源 -->
+        <action name="skill" class="loginAction">
+            <result name="success">/${userName}.jsp</result>
+        </action>
 
-              <action name="simpleViewResultAction" class="simpleViewResultAction">
-                  <result name="error">/error.jsp</result>
-              </action>-->
     </package>
 </struts>
