@@ -30,7 +30,7 @@
             </result>
         </action>
         <!-- redirectAction 结果类型-->
-        <action name="reAction">
+        <action name="reAction*">
             <result type="redirectAction">
                 <!--指定重定向的actionName-->
                 <param name="actionName">login</param>
