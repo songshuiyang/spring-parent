@@ -11,7 +11,7 @@
     <!-- 所有的Action定义都应该放在package下-->
     <package name="com.learn.struts" extends="struts-default">
         <!-- name属性即是该Action的名字，也指定了该Action所处理的请求的URL-->
-        <action name="login" class="loginAction">
+        <action name="login" class="loginAction"> <!--JavaBean由Spring进行管理-->
             <result>/index.jsp</result>
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
@@ -19,8 +19,22 @@
         <action name="regist" class="loginAction" method="regist">
             <result name="success">/welcome.jsp</result>
         </action>
+        <!--        <action name="error">
+                    <result type="plainText">/error.jsp</result>
+                </action>-->
+        <!--plainText结果类型-->
         <action name="error">
-            <result>/error.jsp</result>
+            <result type="plainText">
+                <param name="location">/error.jsp</param>
+                <param name="charSet">UTF-8</param>
+            </result>
         </action>
+
+        <!--配置一个默认Action,默认Action为simpleViewResultAction-->
+        <!--      <default-action-ref name="simpleViewResultAction"/>
+
+              <action name="simpleViewResultAction" class="simpleViewResultAction">
+                  <result name="error">/error.jsp</result>
+              </action>-->
     </package>
 </struts>
