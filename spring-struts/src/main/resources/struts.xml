@@ -24,6 +24,8 @@
             <result>/index.jsp</result>
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
+            <exception-mapping exception="com.learn.struts.exception.myException" result="myException"/>
+            <result name="myException">//exception.jsp</result>
         </action>
         <action name="regist" class="loginAction" method="regist">
             <result name="success">/welcome.jsp</result>

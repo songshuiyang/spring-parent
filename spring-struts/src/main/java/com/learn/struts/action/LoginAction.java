@@ -1,6 +1,7 @@
 package com.learn.struts.action;
 
 import com.learn.struts.demain.User;
+import com.learn.struts.exception.myException;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.stereotype.Component;
@@ -64,7 +65,8 @@ public class LoginAction extends ActionSupport { // ActionSupport 默认的Actio
             return SUCCESS;
         } else {
             // throw new Exception();
-            return ERROR;
+            throw new myException();
+            // return ERROR;
         }
     }
 
