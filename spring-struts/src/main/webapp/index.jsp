@@ -10,6 +10,10 @@
 <s:form action="login">
     姓名:<s:textfield name="userName"/>
     密码:<s:textfield name="passWord"/>
+    <br/>
+    Role id<s:textfield name="role.id"/>
+    Role status<s:textfield name="role.status"/>
+
     <s:submit value="登入"/>
     <input type="submit" value="注册" onclick="regist();"/>
 </s:form>

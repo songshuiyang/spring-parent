@@ -1,8 +1,11 @@
 package com.learn.struts.action;
 
+import com.learn.struts.demain.Role;
 import com.learn.struts.demain.User;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -20,7 +23,11 @@ public class LoginAction extends ActionSupport { // ActionSupport 默认的Actio
     // 封装服务器提示的tip实例变量（封装处理结果）
     private String tip;
 
-    public User user;
+    private User user;
+
+    private Role role;
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     // 系统是通过对应的getter setter方法来处理请求参数的，而不是通过实例变量名来处理请求参数
     public String getUserName() {
@@ -55,9 +62,29 @@ public class LoginAction extends ActionSupport { // ActionSupport 默认的Actio
         this.tip = tip;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginAction{" +
+                "userName='" + userName + '\'' +
+                ", passWord='" + passWord + '\'' +
+                ", tip='" + tip + '\'' +
+                ", user=" + user +
+                ", role=" + role +
+                '}';
+    }
+
     // 定义处理用户请求的execute方法
     @Override
     public String execute() throws Exception {
+        logger.debug(toString());
         if (passWord != null && passWord.equals("123456")) {
             ActionContext.getContext().getSession().put("user", userName);
             tip = "tip messages";
