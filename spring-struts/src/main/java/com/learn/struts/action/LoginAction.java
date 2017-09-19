@@ -27,6 +27,7 @@ public class LoginAction extends ActionSupport { // ActionSupport 默认的Actio
 
     private Role role;
 
+
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     // 系统是通过对应的getter setter方法来处理请求参数的，而不是通过实例变量名来处理请求参数

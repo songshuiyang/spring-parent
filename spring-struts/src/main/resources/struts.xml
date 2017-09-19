@@ -64,6 +64,11 @@
                  <result>/WEB-INF/content/${target}.jsp</result>
              </global-results>-->
 
+        <action name="upload" class="uploadAction">
+            <param name="savePath">/uploadFile</param>
+            <result>/success.jsp</result>
+        </action>
+
 
     </package>
 </struts>
