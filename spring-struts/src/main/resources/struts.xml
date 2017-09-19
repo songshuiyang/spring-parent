@@ -63,12 +63,33 @@
         <!--     <global-results>
                  <result>/WEB-INF/content/${target}.jsp</result>
              </global-results>-->
-
+        <!--文件上传-->
         <action name="upload" class="uploadAction">
+            <!--拦截器有顺序之分-->
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">
+                    image/bmp,image/png,image/gif,image/jpeg,image/jpg,
+                    image/pjpeg ,image/bmp, image/gif, image/x-png,
+                </param>
+            </interceptor-ref>
+            <!--配置系统默认的拦截器-->
+            <interceptor-ref name="defaultStack"/>
             <param name="savePath">/uploadFile</param>
             <result>/success.jsp</result>
+            <result name="input">/uploadForm.jsp</result>
         </action>
-
-
+        <!-- 文件下载-->
+        <action name="download" class="downloadAction">
+            <param name="inputPath">/WEB-INF/image/image.png</param>
+            <result type="stream">
+                <param name="contentType">image/png</param>
+                <param name="inputName">targetFile</param>
+                <param name="contentDisposition">
+                    <!-- attachment表示附件方式，即下载时打开保存对话窗，filename表示下载时显示的保存时的文件名 -->
+                    <!-- 如果不写attachment;或者是写的是inline; 则表示内联，即会在浏览器中尝试打开下载的文件，而不是下载-->
+                    attachment;filename="a.jpg"
+                </param>
+            </result>
+        </action>
     </package>
 </struts>
