@@ -8,14 +8,13 @@
     密码<s:property value="user.passWord" />
 </form>--%>
 <s:form action="login">
-    姓名:<s:textfield name="userName"/>
-    密码:<s:textfield name="passWord"/>
-    <br/>
-    Role id<s:textfield name="role.id"/>
-    Role status<s:textfield name="role.status"/>
+    <s:textfield name="userName" label="姓名"/>
+    <s:textfield name="passWord" label="密码"/>
+    <s:textfield name="role.id" label="Role id"/>
+    <s:textfield name="role.status" label="Role status"/>
 
     <s:submit value="登入"/>
-    <input type="submit" value="注册" onclick="regist();"/>
+    <s:submit value="注册" onclick="regist();"/>
 </s:form>
 </body>
 
