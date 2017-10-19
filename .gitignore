@@ -60,3 +60,5 @@ target
 ##########
 ./build
 ./dist
+
+/bin/
