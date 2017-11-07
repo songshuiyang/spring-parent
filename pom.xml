@@ -14,6 +14,7 @@
 		<module>spring-tx</module>
         <module>spring-hibernate</module>
 		<module>spring-struts</module>
+		<module>spring-schedule</module>
 	</modules>
 	<properties>
 		<!-- 依赖包版本 -->
