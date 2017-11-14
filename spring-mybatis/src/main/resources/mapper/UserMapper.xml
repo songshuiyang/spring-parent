@@ -23,4 +23,21 @@
         <include refid="Base_Column_List"/>
         from user
     </select>
+
+
+    <select id="findPageList" parameterType="map" resultType="user">
+        SELECT *
+        FROM user
+        <where>
+            <if test="IN_id != null">
+                id IN
+                <foreach collection="IN_id" index="index" item="id" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </if>
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+        </where>
+    </select>
 </mapper>

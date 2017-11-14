@@ -5,6 +5,7 @@ import com.mybatis.demain.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -13,5 +14,5 @@ import java.util.List;
 public interface UserMapper {
     List<User> queryAll();
 
-    List<User> findPageList(User user);
+    List<User> findPageList(Map<String, Object> map);
 }
