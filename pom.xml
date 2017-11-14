@@ -16,6 +16,7 @@
 		<module>spring-struts</module>
 		<module>spring-schedule</module>
         <module>spring-mybatis</module>
+		<module>spring-aop</module>
 	</modules>
 	<properties>
 		<!-- 依赖包版本 -->
@@ -199,6 +200,12 @@
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
 				<version>${commons-lang.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>2.3.0</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
