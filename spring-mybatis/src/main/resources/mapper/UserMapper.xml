@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mybatis.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="user">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="TINYINT"/>
+        <result column="age" property="age" jdbcType="TINYINT"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="birthday" property="birthday" jdbcType="TIMESTAMP"
+                javaType="java.util.Date"/>
+        <result column="createtime" property="createtime" jdbcType="TIMESTAMP"
+                javaType="java.util.Date"/>
+        <result column="date" property="date" jdbcType="DATE" javaType="java.util.Date"/>
+        <result column="time" property="time" jdbcType="TIME" javaType="java.util.Date"/>
+
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, name, sex, age, address, birthday, createtime, date, time
+    </sql>
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+    </select>
+</mapper>
