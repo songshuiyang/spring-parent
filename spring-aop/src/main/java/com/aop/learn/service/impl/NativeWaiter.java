@@ -3,6 +3,7 @@ package com.aop.learn.service.impl;
 import com.aop.learn.service.Writer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 /**
  * @author songshuiyang
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
  * @description:
  * @date 2017/11/15 21:07
  */
+@Service
 public class NativeWaiter implements Writer {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());

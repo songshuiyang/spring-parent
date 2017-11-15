@@ -4,6 +4,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * @author songshuiyang
@@ -11,6 +12,7 @@ import org.slf4j.LoggerFactory;
  * @description:
  * @date 2017/11/15 21:11
  */
+@Component
 @Aspect // 通过该注解将该类标识为一个切面
 public class PreGreetingAspect {
 
