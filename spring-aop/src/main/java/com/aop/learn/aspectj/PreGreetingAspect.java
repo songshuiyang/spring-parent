@@ -20,7 +20,7 @@ public class PreGreetingAspect {
 
     @Before("execution(* greetTo(..))") // 定义切点和增强类型（前置增强,可以带任何参数，和任意的返回值）
     public void beforeGreeting() { // 增强的横切逻辑
-        logger.info("How are you Aspect");
+        logger.info("How are you Aspect 使用前置增强");
     }
 
 
