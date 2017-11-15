@@ -1,5 +1,6 @@
 package com.aop.learn.service.impl;
 
+import com.aop.learn.annotation.NeedTest;
 import com.aop.learn.service.Writer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,5 +25,11 @@ public class NativeWaiter implements Writer {
     @Override
     public void serveTo(String clientName) {
         logger.info("-------------serveTo " + clientName);
+    }
+
+    @Override
+    @NeedTest
+    public void nestTo() {
+        logger.info("开始执行 nestTo() 函数");
     }
 }

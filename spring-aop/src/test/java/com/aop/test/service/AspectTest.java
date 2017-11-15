@@ -51,4 +51,12 @@ public class AspectTest extends BaseTest {
         Seller seller = (Seller) writer; // 可以成功的进行强制类型转换
         seller.sell("机械键盘");
     }
+
+    /**
+     * 测试 @annotation 切点函数
+     */
+    @Test
+    public void annotationNeedTest() {
+        writer.nestTo();
+    }
 }

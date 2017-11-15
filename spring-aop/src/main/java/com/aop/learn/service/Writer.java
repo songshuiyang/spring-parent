@@ -11,4 +11,6 @@ public interface Writer {
     public void greetTo(String clientName);
 
     public void serveTo(String clientName);
+
+    public void nestTo();
 }
