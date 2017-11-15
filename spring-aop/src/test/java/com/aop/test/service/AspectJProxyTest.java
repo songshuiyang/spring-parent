@@ -24,4 +24,5 @@ public class AspectJProxyTest {
         proxy.greetTo("songshuiyang");
         proxy.serveTo("songshuiyang");
     }
+
 }

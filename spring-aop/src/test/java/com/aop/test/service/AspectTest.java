@@ -1,5 +1,6 @@
 package com.aop.test.service;
 
+import com.aop.learn.service.Seller;
 import com.aop.learn.service.Writer;
 import com.aop.test.BaseTest;
 import org.junit.Test;
@@ -39,5 +40,15 @@ public class AspectTest extends BaseTest {
     public void test1() {
         writer.serveTo("songshuiyang");
         writer.greetTo("songshuiyang");
+    }
+
+    /**
+     * 测试引介增强
+     */
+    @Test
+    public void declaredParentsTest() {
+        writer.greetTo("songshuiyang");
+        Seller seller = (Seller) writer; // 可以成功的进行强制类型转换
+        seller.sell("机械键盘");
     }
 }
