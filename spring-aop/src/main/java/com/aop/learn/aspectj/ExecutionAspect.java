@@ -102,5 +102,11 @@ public class ExecutionAspect {
 
     }
 
+    /**
+     * 切点符合运算 ( && 与运算) (|| 或运算)
+     */
+    @Before("execution(public * *(..))" + " && execution(public * *(..))")
+    public void beforeAspect11() {
 
+    }
 }
