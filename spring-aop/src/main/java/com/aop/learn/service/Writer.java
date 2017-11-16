@@ -10,7 +10,10 @@ public interface Writer {
 
     public void greetTo(String clientName);
 
+    public void greetTo(String clientName, Integer age);
+
     public void serveTo(String clientName);
 
+    //
     public void nestTo();
 }

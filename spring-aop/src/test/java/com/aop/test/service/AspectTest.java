@@ -59,4 +59,12 @@ public class AspectTest extends BaseTest {
     public void annotationNeedTest() {
         writer.nestTo();
     }
+
+    /**
+     * 环绕增强，访问连接点信息
+     */
+    @Test
+    public void aroundTest() {
+        writer.greetTo("songshuiyang1", 18);
+    }
 }

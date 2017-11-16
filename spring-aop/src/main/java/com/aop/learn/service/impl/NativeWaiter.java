@@ -23,6 +23,11 @@ public class NativeWaiter implements Writer {
     }
 
     @Override
+    public void greetTo(String clientName, Integer age) {
+        logger.info("-------------greetTo " + clientName + "  " + age + "岁");
+    }
+
+    @Override
     public void serveTo(String clientName) {
         logger.info("-------------serveTo " + clientName);
     }

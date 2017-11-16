@@ -2,7 +2,6 @@ package com.aop.learn.aspectj;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.springframework.stereotype.Component;
 
 /**
  * @author songshuiyang
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @date 2017/11/15 23:05
  */
 @Aspect
-@Component
+//@Component
 public class ExecutionAspect {
 
     /**
