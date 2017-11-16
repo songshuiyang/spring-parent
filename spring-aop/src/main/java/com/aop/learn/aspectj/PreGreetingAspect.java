@@ -39,5 +39,11 @@ public class PreGreetingAspect {
         logger.info("------------环绕增强 执行方法体结束-------------");
     }
 
+    @Around("execution(* *To(..)) && args(name,age)")
+    public void joinPointAccess(String name, Integer age) throws Throwable {
+        logger.info("------------环绕增强参数绑定-------------");
+        logger.info("------------环绕增强参数绑定-------------" + name);
+        logger.info("------------环绕增强参数绑定-------------" + age);
+    }
 
 }
