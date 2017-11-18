@@ -45,4 +45,14 @@ public class SchemaAspectTest {
         Writer writer = (Writer) context.getBean("nativeWaiter");
         writer.greetTo("Schema 实现绑定连接点信息");
     }
+
+    /**
+     * aop:advisor 是切点和增强的复合体,仅包含一个切点和增强
+     */
+    @Test
+    public void test4() {
+        Writer writer = (Writer) context.getBean("nativeWaiter");
+        writer.serveTo("aop:advisor");
+    }
+
 }
