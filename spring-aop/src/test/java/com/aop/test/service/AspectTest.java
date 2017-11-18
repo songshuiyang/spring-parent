@@ -94,4 +94,12 @@ public class AspectTest extends BaseTest {
     public void afterReturnBindTest() {
         writer.name();
     }
+
+    /**
+     * 测试绑定抛出的异常返回值
+     */
+    @Test
+    public void afterExceptionnBindTest() {
+        writer.throwExcetion();
+    }
 }

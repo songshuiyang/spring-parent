@@ -42,4 +42,11 @@ public class NativeWaiter implements Writer {
     public String name() {
         return "宋水阳";
     }
+
+    @Override
+    public void throwExcetion() {
+        throw new IllegalArgumentException("抛出异常了");
+    }
+
+
 }

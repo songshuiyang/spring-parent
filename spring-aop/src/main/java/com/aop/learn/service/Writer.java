@@ -17,4 +17,6 @@ public interface Writer {
     public void nestTo();
 
     String name();
+
+    void throwExcetion();
 }
