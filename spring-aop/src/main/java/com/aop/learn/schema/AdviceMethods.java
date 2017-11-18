@@ -9,7 +9,11 @@ package com.aop.learn.schema;
 public class AdviceMethods {
 
     public void preGreeting() {
-        System.out.println("-------------用作增强的方法");
+        System.out.println("-------------前置增强");
+    }
+
+    public void afterGreeting(String retVal) {
+        System.out.println("-------------后置增强,返回的参数" + retVal);
     }
 
 }
