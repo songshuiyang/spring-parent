@@ -37,4 +37,12 @@ public class SchemaAspectTest {
         writer.name();
     }
 
+    /**
+     * 绑定连接点信息
+     */
+    @Test
+    public void test3() {
+        Writer writer = (Writer) context.getBean("nativeWaiter");
+        writer.greetTo("Schema 实现绑定连接点信息");
+    }
 }

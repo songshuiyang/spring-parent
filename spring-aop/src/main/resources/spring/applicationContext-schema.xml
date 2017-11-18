@@ -15,16 +15,21 @@
         <!--aop:pointcut 配置命名切点,可以被其他增强引用-->
         <aop:pointcut id="greetToPointcut"
                       expression="target(com.aop.learn.service.impl.NativeWaiter) and execution (* greetTo(..))"/>
+        <aop:pointcut id="bindParmPointcut"
+                      expression="target(com.aop.learn.service.impl.NativeWaiter) and execution (* greetTo(..)) and args(clientName)"/>
 
         <!--aop:aspect 元素标签定义切面,其内部可以定义多个增强-->
         <aop:aspect ref="adviceMethods">
-            <!--aop:before前置增强 method 增强方法， pointcut 切点表达式-->
+            <!-- aop:before前置增强 method 增强方法， pointcut 切点表达式-->
             <aop:before method="preGreeting"
                         pointcut-ref="greetToPointcut"/>
-            <!--aop:before后置增强-->
+            <!-- aop:before后置增强-->
             <aop:after-returning method="afterGreeting"
                                  pointcut="target(com.aop.learn.service.impl.NativeWaiter) and execution (* name(..))"
                                  returning="retVal"/>
+            <!-- 测试绑定连接点信息-->
+            <aop:after method="bindParmGreet"
+                       pointcut-ref="bindParmPointcut"/>
         </aop:aspect>
     </aop:config>
 
