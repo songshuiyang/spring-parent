@@ -65,7 +65,7 @@ public class AspectTest extends BaseTest {
     }
 
     /**
-     * 环绕增强，访问连接点信息
+     * 测试环绕增强，访问连接点信息
      */
     @Test
     public void aroundTest() {
@@ -73,10 +73,18 @@ public class AspectTest extends BaseTest {
     }
 
     /**
-     * 绑定代理对象
+     * 测试绑定代理对象
      */
     @Test
     public void agentBindTest() {
+        agentWriter.agent(writer);
+    }
+
+    /**
+     * 测试绑定类注解对象
+     */
+    @Test
+    public void annoBindTest() {
         agentWriter.agent(writer);
     }
 }

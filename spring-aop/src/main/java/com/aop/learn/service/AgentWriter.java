@@ -1,6 +1,8 @@
 package com.aop.learn.service;
 
 
+import com.aop.learn.annotation.Author;
+
 /**
  * @author songshuiyang
  * @title:
@@ -9,6 +11,7 @@ package com.aop.learn.service;
  */
 public interface AgentWriter {
 
+    @Author(name = "songshuiyang")
     void agent(Writer writer);
 
 }

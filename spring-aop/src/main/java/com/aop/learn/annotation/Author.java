@@ -9,12 +9,10 @@ import java.lang.annotation.Target;
  * @author songshuiyang
  * @title:
  * @description:
- * @date 2017/11/15 22:49
+ * @date 2017/11/18 13:35
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface NeedTest {
-    boolean value() default true;
-
+public @interface Author {
     String name() default "";
 }

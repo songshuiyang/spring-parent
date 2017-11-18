@@ -33,7 +33,7 @@ public class NativeWaiter implements Writer {
     }
 
     @Override
-    @NeedTest
+    @NeedTest()
     public void nestTo() {
         logger.info("开始执行 nestTo() 函数");
     }
