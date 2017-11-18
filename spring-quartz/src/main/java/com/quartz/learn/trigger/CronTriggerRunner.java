@@ -14,9 +14,9 @@ import org.quartz.impl.StdSchedulerFactory;
 public class CronTriggerRunner {
 
     public static void main(String[] args) throws Exception {
-        JobDetail jobDetail = new JobDetail("job_1", "jgroup1", SimpleJob.class);
+        JobDetail jobDetail = new JobDetail("job_3", "jgroup3", SimpleJob.class);
 
-        CronTrigger cronTrigger = new CronTrigger("trigger_2", "tgroup1");
+        CronTrigger cronTrigger = new CronTrigger("trigger_3", "tgroup3");
         CronExpression cronExpression = new CronExpression("0/1 * * * * ?");
         cronTrigger.setCronExpression(cronExpression);
 

@@ -18,9 +18,9 @@ import java.util.Date;
 public class SimpleTriggerRunner {
 
     public static void main(String[] args) throws Exception {
-        JobDetail jobDetail = new JobDetail("job_1", "jgroup1", SimpleJob.class);
+        JobDetail jobDetail = new JobDetail("job_4", "jgroup4", SimpleJob.class);
 
-        SimpleTrigger simpleTrigger = new SimpleTrigger("trigger_1", "tgroup1");
+        SimpleTrigger simpleTrigger = new SimpleTrigger("trigger_4", "tgroup4");
         simpleTrigger.setStartTime(new Date()); // 开始时间
         simpleTrigger.setRepeatInterval(2000);  // 间隔
         simpleTrigger.setRepeatCount(100);      // 次数
