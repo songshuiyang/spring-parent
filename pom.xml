@@ -17,6 +17,7 @@
 		<module>spring-schedule</module>
         <module>spring-mybatis</module>
 		<module>spring-aop</module>
+		<module>spring-quartz</module>
 	</modules>
 	<properties>
 		<!-- 依赖包版本 -->
@@ -216,7 +217,7 @@
 			<dependency>
 				<groupId>org.quartz-scheduler</groupId>
 				<artifactId>quartz</artifactId>
-				<version>2.3.0</version>
+				<version>1.8.6</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

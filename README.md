@@ -13,4 +13,5 @@ Spring 练习项目,用于记录 Spring 的知识点，及整合其他框架
 8. spring schedule
 9. spring struts
 10. spring tx
+11. spring quartz
 
