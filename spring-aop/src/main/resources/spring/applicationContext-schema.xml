@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+
+
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <!--配置一个基于Schema的切面，aop:config 可以定义多个切面-->
+    <aop:config proxy-target-class="true">
+        <!--aop:aspect 元素标签定义切面,其内部可以定义多个增强-->
+        <aop:aspect ref="adviceMethods">
+            <!--method 增强方法， pointcut 切点表达式-->
+            <aop:before method="preGreeting"
+                        pointcut="target(com.aop.learn.service.impl.NativeWaiter) and execution (* greetTo(..))"/>
+        </aop:aspect>
+    </aop:config>
+
+    <!--增强方法所在的Bean-->
+    <bean id="adviceMethods" class="com.aop.learn.schema.AdviceMethods"/>
+    <bean id="nativeWaiter" class="com.aop.learn.service.impl.NativeWaiter"/>
+
+
+</beans>

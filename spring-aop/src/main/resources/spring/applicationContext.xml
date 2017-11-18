@@ -18,4 +18,7 @@
     <!--<aop:aspectj-autoproxy proxy-target-class="true"/> 表示使用CGLib动态代理技术织入增强-->
 
 
+    <import resource="applicationContext-schema.xml"/>
+
+
 </beans>
