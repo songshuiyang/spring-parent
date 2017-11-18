@@ -1,5 +1,6 @@
 package com.aop.test.service;
 
+import com.aop.learn.service.AgentWriter;
 import com.aop.learn.service.Seller;
 import com.aop.learn.service.Writer;
 import com.aop.test.BaseTest;
@@ -20,6 +21,9 @@ public class AspectTest extends BaseTest {
 
     @Autowired
     private Writer writer;
+
+    @Autowired
+    private AgentWriter agentWriter;
 
     /**
      * 查看注入了那些类
@@ -66,5 +70,13 @@ public class AspectTest extends BaseTest {
     @Test
     public void aroundTest() {
         writer.greetTo("songshuiyang1", 18);
+    }
+
+    /**
+     * 绑定代理对象
+     */
+    @Test
+    public void agentBindTest() {
+        agentWriter.agent(writer);
     }
 }

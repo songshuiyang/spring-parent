@@ -14,6 +14,5 @@ public interface Writer {
 
     public void serveTo(String clientName);
 
-    //
     public void nestTo();
 }
