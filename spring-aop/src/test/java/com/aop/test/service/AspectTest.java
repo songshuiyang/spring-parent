@@ -87,4 +87,11 @@ public class AspectTest extends BaseTest {
     public void annoBindTest() {
         agentWriter.agent(writer);
     }
+    /**
+     * 测试后置增强绑定返回值
+     */
+    @Test
+    public void afterReturnBindTest() {
+        writer.name();
+    }
 }

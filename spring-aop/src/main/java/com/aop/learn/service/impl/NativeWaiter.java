@@ -37,4 +37,9 @@ public class NativeWaiter implements Writer {
     public void nestTo() {
         logger.info("开始执行 nestTo() 函数");
     }
+
+    @Override
+    public String name() {
+        return "宋水阳";
+    }
 }
