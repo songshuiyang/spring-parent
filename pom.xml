@@ -18,6 +18,7 @@
         <module>spring-mybatis</module>
 		<module>spring-aop</module>
 		<module>spring-quartz</module>
+		<module>spring-shiro</module>
 	</modules>
 	<properties>
 		<!-- 依赖包版本 -->
