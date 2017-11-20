@@ -70,5 +70,34 @@ public class LoginLogoutTest {
 
     }
 
+    /**
+     * JDBC Realm使用
+     */
+    @Test
+    public void testJDBCRealm() {
+
+        // 初始化SecurityManager工厂
+        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shrio-jdbc.ini");
+
+        // 接着获取SecurityManager并绑定到SecurityUtils，这是一个全局设置，设置一次即可
+        SecurityManager securityManager = factory.getInstance();
+        SecurityUtils.setSecurityManager(securityManager);
+
+        // 得到Subject及创建用户名/密码身份验证Token（即用户身份/凭证），自动绑定到当前线程
+        Subject subject = SecurityUtils.getSubject();
+        UsernamePasswordToken token = new UsernamePasswordToken("songshuiyang", "123456");
+
+        // 验证
+        subject.login(token);
+
+        // 断言是否已经登入
+        Assert.assertEquals(true, subject.isAuthenticated());
+
+        // 退出
+        subject.logout();
+
+    }
+
+
 
 }
