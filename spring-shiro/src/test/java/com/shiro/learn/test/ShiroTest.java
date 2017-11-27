@@ -10,6 +10,8 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * @author songshuiyang
  * @title:
@@ -33,6 +35,9 @@ public class ShiroTest {
         return subject;
     }
 
+    /**
+     * role
+     */
     @Test
     public void testBase() {
         Subject subject = login("song", "123");
@@ -40,7 +45,21 @@ public class ShiroTest {
         System.out.println(collection.asList());
         System.out.println(collection.getRealmNames());
         System.out.println(subject.getPrincipal());
+        System.out.println("是否有某个角色" + subject.hasRole("r1"));
+        System.out.println("是否有所有以下的角色" + subject.hasRoles(Arrays.asList("r1", "r2", "r3"))[2]);
+        subject.checkRole("r3");
     }
 
-
+    /**
+     * permitted
+     *
+     */
+    @Test
+    public void testBase1() {
+        Subject subject = login("song", "123");
+        PrincipalCollection collection = subject.getPrincipals();
+        System.out.println("是否有某个权限" + subject.isPermitted("user:create"));
+        System.out.println("是否有某个权限" + subject.isPermitted("user:view"));
+        System.out.println("是否有某个权限" + subject.isPermitted("topic:view:sdfsa"));
+    }
 }
