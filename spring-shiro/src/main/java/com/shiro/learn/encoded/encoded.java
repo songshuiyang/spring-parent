@@ -2,6 +2,8 @@ package com.shiro.learn.encoded;
 
 
 import org.apache.shiro.codec.Base64;
+import org.apache.shiro.codec.CodecSupport;
+import org.apache.shiro.crypto.hash.Md5Hash;
 import org.springframework.util.Assert;
 
 /**
@@ -18,6 +20,10 @@ public class encoded {
         String str2 =Base64.decodeToString(base64Encoded);
         System.out.println(str);
         System.out.println(str2);
+
+
+        CodecSupport codecSupport;
+
     }
 
 }
