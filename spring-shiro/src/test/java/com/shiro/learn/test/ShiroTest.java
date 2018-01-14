@@ -61,5 +61,7 @@ public class ShiroTest {
         System.out.println("是否有某个权限" + subject.isPermitted("user:create"));
         System.out.println("是否有某个权限" + subject.isPermitted("user:view"));
         System.out.println("是否有某个权限" + subject.isPermitted("topic:view:sdfsa"));
+
+        System.out.println("全部的删除权限" + subject.isPermitted("user:delete"));
     }
 }
