@@ -10,6 +10,8 @@
     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
     <constant name="struts.locale" value="zh_CN"></constant>
     <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <!--允许Action名中使用斜线-->
+    <constant name="struts.enable.SlashesInActionNames" value="true"></constant>
 
     <!-- 所有的Action定义都应该放在package下-->
     <package name="com.learn.struts" extends="struts-default">

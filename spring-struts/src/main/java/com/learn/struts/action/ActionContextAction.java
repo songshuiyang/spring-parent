@@ -13,12 +13,26 @@ import org.springframework.stereotype.Component;
 @Component
 public class ActionContextAction extends ActionSupport {
 
+    String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     @Override
     public String execute() throws Exception {
         ActionContext actionContext = ActionContext.getContext();
 
 
         System.out.println(actionContext.getApplication());
-        return super.execute();
+        return SUCCESS;
+    }
+
+    public String actionContext() {
+        return SUCCESS;
     }
 }

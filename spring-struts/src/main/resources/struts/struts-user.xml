@@ -2,7 +2,7 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd" >
 <struts>
-    <package name="com.learn.struts" extends="struts-default">
+    <package name="com.learn.struts" extends="json-default">
 
         <action name="include" class="loginAction">
             <result>/index.jsp</result>
@@ -16,5 +16,21 @@
             <result name="success">/welcome.jsp</result>
         </action>
 
+        <!--action中包含斜线-->
+        <action name="actionContext/xiexian" class="actionContextAction">
+            <result name="success">/index.jsp</result>
+        </action>
+
+        <action name="jsonAction" class="jsonAction">
+
+            <result type="json">
+                <!-- 取消浏览器缓存-->
+                <param name="noCache">true</param>
+                <!-- 设置服务器响应类型-->
+                <param name="contentType">application/json</param>
+                <!--排除值为null的属性-->
+                <param name="excludeNullProperties">true</param>
+            </result>
+        </action>
     </package>
 </struts>
