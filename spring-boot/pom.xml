@@ -78,14 +78,14 @@
 		</dependency>
 
 		<!-- Servlet -->
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
+        <!--<dependency>-->
+        <!--<groupId>taglibs</groupId>-->
+        <!--<artifactId>standard</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>jstl</groupId>-->
+        <!--<artifactId>jstl</artifactId>-->
+        <!--</dependency>-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>

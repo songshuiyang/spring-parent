@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd" >
+<struts>
+
+
+    <!-- 所有的Action定义都应该放在package下-->
+    <package name="com.learn.struts" extends="struts-default">
+
+        <action name="include" class="loginAction">
+            <result>/index.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="success">/welcome.jsp</result>
+            <exception-mapping exception="com.learn.struts.exception.myException" result="myException"/>
+            <result name="myException">/exception.jsp</result>
+        </action>
+
+    </package>
+</struts>

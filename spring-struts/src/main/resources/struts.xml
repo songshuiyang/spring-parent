@@ -2,6 +2,9 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd" >
 <struts>
+    <!--可以按模块进行配置，一个模块一个文件-->
+    <include file="struts/struts-user.xml"/>
+
     <constant name="struts.objectFactory" value="spring"/>
     <constant name="struts.devMode" value="true"></constant>
     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
